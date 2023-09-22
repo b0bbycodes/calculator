@@ -1,0 +1,136 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 15px;
+  background-color: black;
+}
+
+.calc-container {
+  border: 3px solid rgba(80, 78, 71, 0.4);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1.7rem 0.8rem 1rem 0.8rem;
+}
+
+.calc-display {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 10px 0 10px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.calc-input {
+  font-size: 25px;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 3px;
+}
+
+.delete-icon {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.calc-result {
+  font-size: 35px;
+  color: transparent;
+  margin-top: 15px;
+}
+
+.active {
+  color: black;
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.calc-buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px 8px;
+}
+
+.clear-btn {
+  background-color: rgb(231, 231, 31);
+}
+
+button {
+  background-color: #c1b9bf;
+  border: none;
+  border-radius: 5px;
+  padding: 17px;
+  font-size: 19px;
+  border: 2px solid black;
+}
+
+.btn-text:hover,
+.equals-btn:hover,
+.operator:hover {
+  background-color: rgb(155, 154, 150, 0.4);
+
+  transform: scale(1.1);
+}
+
+.btn-text:active,
+.equals-btn:active,
+.operator:active {
+  transform: scale(0.9);
+}
+
+.clear-btn:hover {
+  background-color: rgb(192, 192, 24);
+  transform: scale(1.1);
+}
+
+.clear-btn:active {
+  transform: scale(0.9);
+}
+
+footer {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 15px 0;
+  font-size: 20px;
+}
+
+footer a:hover i {
+  transform: scale(1.1);
+}
+
+/* media query */
+
+@media (max-width: 428px) {
+  .calc-buttons {
+    gap: 29px 10px;
+  }
+
+  button {
+    background-color: #c1b9bf;
+    border-radius: 5px;
+    font-size: 19px;
+    border: 2px solid;
+  }
+}
+
+@media (max-width: 328px) {
+  .calc-buttons {
+    gap: 10px 10px;
+  }
+
+  button {
+    padding: 10px;
+  }
+}
